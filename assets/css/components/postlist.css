@@ -6,11 +6,11 @@
 }
 
 .gh-postfeed > *:first-child h2 {
-    @apply text-6xl;
+    @apply md:text-6xl;
 }
 
 .gh-postfeed > *:first-child p {
-    @apply text-xl;
+    @apply md:text-xl;
 }
 
 .gh-card-content p {
@@ -23,15 +23,6 @@
 
 /* Index
 /* ---------------------------------------------------------- */
-
-.gh-canvas,
-.kg-width-full.kg-content-wide {
-    --gap: 4vw;
-    --main: min(var(--content-width, 720px), 100% - var(--gap) * 2);
-    --wide: minmax(0, calc((var(--container-width, 1200px) - var(--content-width, 720px)) / 2));
-    --full: minmax(var(--gap), 1fr);
-}
-
 .kg-width-full.kg-content-wide {
     @apply grid grid-cols-canvas;
 }

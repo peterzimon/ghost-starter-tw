@@ -57,6 +57,12 @@
     @apply list-disc;
 }
 
+.gh-content > ul li:not(:first-of-type),
+.gh-content > ol li:not(:first-of-type),
+.gh-content > dl li:not(:first-of-type) {
+    @apply mt-[0.5em];
+}
+
 .gh-content hr {
     @apply mt-[6vmin];
 }
@@ -66,11 +72,11 @@
 }
 
 .gh-content blockquote {
-    @apply relative italic;
+    @apply relative italic px-[1.5em];
 }
 
 .gh-content blockquote::before {
-    @apply content-[''] absolute -left-[1.5em] top-0 bottom-0 w-1 bg-[var(--color-primary)];
+    @apply content-[''] absolute inset-0 w-0.5 bg-[var(--color-primary)];
 }
 
 @media (max-width: 650px) {
@@ -80,10 +86,6 @@
     .gh-canvas dl,
     .gh-canvas p {
         @apply text-lg;
-    }
-
-    .gh-content blockquote::before {
-        @apply -left-[4vmin];
     }
 }
 

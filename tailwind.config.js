@@ -10,6 +10,7 @@ export default {
           xl: '1320px',
           tablet: '860px'
         },
+        // Update variables in assets/css/base/globals.css
         gridTemplateColumns: {
           'canvas': `
             [full-start] var(--full)
@@ -66,7 +67,7 @@ export default {
           sm: '1.35rem',
           md: '1.45rem',
           lg: '1.75rem',
-          xl: '2rem',
+          xl: '2.1rem',
           '2xl': '2.4rem',
           '3xl': '3rem',
           '4xl': '3.6rem',
@@ -79,7 +80,7 @@ export default {
         },
         lineHeight: {
             base: '1.5em',
-            paragraph: '1.45em',
+            paragraph: '1.5em',
             tight: '1.35em',
             tighter: '1.25em',
             supertight: '1.1em'

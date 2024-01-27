@@ -6,10 +6,10 @@
 
     <header class="gh-header gh-canvas grid grid-cols-canvas pb-[8vmin] text-center">
         <span class="gh-post-meta mb-3 text-xs leading-tight tracking-wide uppercase opacity-80"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
-        <h1 class="gh-title text-6xl">{{title}}</h1>
+        <h1 class="gh-title text-3xl sm:text-4xl md:text-6xl">{{title}}</h1>
 
         {{#if custom_excerpt}}
-        <p class="gh-excerpt !text-xl mt-[3vmin]">{{custom_excerpt}}</p>
+        <p class="gh-excerpt !text-lg md:!text-xl mt-[3vmin]">{{custom_excerpt}}</p>
         {{/if}}
 
         {{#if feature_image}}
@@ -79,13 +79,13 @@
 </article>
 
 <aside class="gh-readmore py-[8vmin] px-[4vmin] text-xl">
-    <div class="gh-readmore-inner gh-container w-full max-w-[1200px] mx-auto grid gap-[8vmin] grid-cols-2 items-start">
+    <div class="gh-readmore-inner gh-container w-full max-w-[1200px] mx-auto grid gap-[8vmin] grid-cols-2 items-center">
         <div class="gh-readmore-next">
-            {{#next_post}}<a class="flex text-current no-underline gap-2" href="{{url}}">{{> "icons/arrow-left"}} <h4 class="w-full text-inherit">{{title}}</h4></a>{{/next_post}}
+            {{#next_post}}<a class="flex text-current no-underline gap-3 items-center" href="{{url}}">{{> "icons/arrow-left"}} <h4 class="w-full text-base md:text-inherit">{{title}}</h4></a>{{/next_post}}
         </div>
         <div class="gh-readmore-prev justify-end text-right">
-            {{#prev_post}}<a class="inline-flex text-current no-underline gap-2" href="{{url}}">
-                <h4 class="w-full text-inherit">{{title}}</h4> {{> "icons/arrow-right"}}
+            {{#prev_post}}<a class="inline-flex text-current no-underline gap-3 items-center" href="{{url}}">
+                <h4 class="w-full text-base md:text-inherit">{{title}}</h4> {{> "icons/arrow-right"}}
             </a>{{/prev_post}}
         </div>
     </div>
