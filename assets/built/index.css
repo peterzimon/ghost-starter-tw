@@ -556,10 +556,6 @@ video {
   grid-column: wide-start/wide-end !important;
 }
 
-.col-\[wide-start\/wide-end\] {
-  grid-column: wide-start/wide-end;
-}
-
 .col-auto {
   grid-column: auto;
 }
@@ -594,12 +590,12 @@ video {
   margin-left: 4rem;
 }
 
-.mt-3 {
-  margin-top: 1.2rem;
-}
-
 .mt-\[3vmin\] {
   margin-top: 3vmin;
+}
+
+.mt-\[4vmin\] {
+  margin-top: 4vmin;
 }
 
 .mt-\[8vmin\] {
@@ -692,6 +688,10 @@ video {
   grid-auto-flow: row dense;
 }
 
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .grid-cols-\[1fr\] {
   grid-template-columns: 1fr;
 }
@@ -716,8 +716,16 @@ video {
   flex-wrap: wrap;
 }
 
+.items-start {
+  align-items: flex-start;
+}
+
 .items-center {
   align-items: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 .justify-center {
@@ -732,8 +740,16 @@ video {
   gap: 4rem;
 }
 
+.gap-2 {
+  gap: 0.8rem;
+}
+
 .gap-4 {
   gap: 1.6rem;
+}
+
+.gap-\[8vmin\] {
+  gap: 8vmin;
 }
 
 .gap-x-\[4vmin\] {
@@ -811,6 +827,10 @@ video {
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .\!text-xl {
   font-size: 2rem !important;
 }
@@ -838,6 +858,10 @@ video {
 
 .text-sm {
   font-size: 1.35rem;
+}
+
+.text-xl {
+  font-size: 2rem;
 }
 
 .text-xs {
@@ -872,6 +896,14 @@ video {
   letter-spacing: 0.025em;
 }
 
+.text-\[var\(--color-primary\)\] {
+  color: var(--color-primary);
+}
+
+.text-current {
+  color: currentColor;
+}
+
 .text-inherit {
   color: inherit;
 }
@@ -898,6 +930,11 @@ video {
 
 /* Globals
 /* ---------------------------------------------------------- */
+
+:root {
+  /* Colours */
+  --color-primary: var(--ghost-accent-color, #3eb0ef);
+}
 
 html {
   font-size: 62.5%;
@@ -1133,7 +1170,7 @@ via the  @apply function
   width: 100%;
 }
 
-/* Content & Typography
+/* Typography
 /* ---------------------------------------------------------- */
 
 .gh-content > * + * {
@@ -1251,15 +1288,13 @@ figcaption strong {
 
 .gh-canvas > pre {
   overflow: scroll;
-  border-radius: 0.125rem;
+  border-radius: 0.375rem;
+  border-width: 1px;
   background-color: rgba(255,255,255,0.8);
   padding-top: 1.6rem;
   padding-bottom: 1.6rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .kg-embed-card {
@@ -1349,6 +1384,16 @@ figcaption strong {
 .gh-content tbody tr:last-child {
   border-bottom-width: 1px;
   border-color: rgba(0,0,0,0.1);
+}
+
+/* Read more
+/* ---------------------------------------------------------- */
+
+.gh-readmore svg {
+  margin-top: 0.15em;
+  display: inline-block;
+  height: 1em;
+  vertical-align: middle;
 }
 
 /*

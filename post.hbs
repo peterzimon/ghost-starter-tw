@@ -64,8 +64,8 @@
 
     <footer class="gh-footer gh-canvas grid grid-cols-canvas">
 
-        <div class="gh-post-authors">
-            Written by {{#foreach authors}}<a href="{{url}}">{{name}}</a>{{/foreach}}
+        <div class="gh-post-authors mt-[4vmin]">
+            Written by {{#foreach authors}}<a href="{{url}}" class="text-[var(--color-primary)]">{{name}}</a>{{/foreach}}
         </div>
 
         {{#if comments}}
@@ -78,14 +78,14 @@
 
 </article>
 
-<aside class="gh-readmore">
-    <div class="gh-readmore-inner gh-container w-full max-w-[1200px] mx-auto">
+<aside class="gh-readmore py-[8vmin] px-[4vmin] text-xl">
+    <div class="gh-readmore-inner gh-container w-full max-w-[1200px] mx-auto grid gap-[8vmin] grid-cols-2 items-start">
         <div class="gh-readmore-next">
-            {{#next_post}}<a href="{{url}}">{{> "icons/arrow-left"}} <h4>{{title}}</h4></a>{{/next_post}}
+            {{#next_post}}<a class="flex text-current no-underline gap-2" href="{{url}}">{{> "icons/arrow-left"}} <h4 class="w-full text-inherit">{{title}}</h4></a>{{/next_post}}
         </div>
-        <div class="gh-readmore-prev">
-            {{#prev_post}}<a href="{{url}}">
-                <h4>{{title}}</h4> {{> "icons/arrow-right"}}
+        <div class="gh-readmore-prev justify-end text-right">
+            {{#prev_post}}<a class="inline-flex text-current no-underline gap-2" href="{{url}}">
+                <h4 class="w-full text-inherit">{{title}}</h4> {{> "icons/arrow-right"}}
             </a>{{/prev_post}}
         </div>
     </div>

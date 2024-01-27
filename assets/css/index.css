@@ -6,6 +6,11 @@
 
 /* Globals
 /* ---------------------------------------------------------- */
+:root {
+    /* Colours */
+    --color-primary: var(--ghost-accent-color, #3eb0ef);
+}
+
 html {
     @apply text-[62.5%];
 }
@@ -178,7 +183,7 @@ via the  @apply function
 }
 
 
-/* Content & Typography
+/* Typography
 /* ---------------------------------------------------------- */
 
 .gh-content > * + * {
@@ -263,7 +268,7 @@ figcaption strong {
 }
 
 .gh-canvas > pre {
-    @apply overflow-scroll py-4 px-5 bg-[rgba(255,255,255,0.8)] rounded-sm shadow-sm;
+    @apply overflow-scroll py-4 px-5 bg-[rgba(255,255,255,0.8)] rounded-md border;
 }
 
 .kg-embed-card {
@@ -333,7 +338,11 @@ figcaption strong {
 }
 
 
-
+/* Read more
+/* ---------------------------------------------------------- */
+.gh-readmore svg {
+    @apply inline-block align-middle h-[1em] mt-[0.15em];
+}
 
 
 
