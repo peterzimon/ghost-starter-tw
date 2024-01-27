@@ -1,6 +1,6 @@
-# Ghost Starter Theme
+# Ghost Starter Theme with Tailwind CSS
 
-A starter framework for Ghost themes! Click **Use this template** to create a copy of this repo for everything you need to get started developing a custom Ghost theme.
+A starter framework for Ghost themes using Tailwind CSS! Click **Use this template** to create a copy of this repo for everything you need to get started developing a custom Ghost theme.
 
 &nbsp;
 
@@ -29,11 +29,11 @@ We've documented this starter theme pretty heavily so that it should be possible
 
 👟&nbsp;Fast compile times, powered by [Rollup](https://rollupjs.org).
 
-🦋&nbsp;Write next-gen CSS for today's browsers with [PostCSS](https://postcss.org/). Add the CSS tools you love via [`rollup.config.js`](rollup.config.js).
+🦋&nbsp;Write next-gen CSS for today's browsers with [Tailwind CSS](https://www.tailwindcss.com) and [PostCSS](https://postcss.org/). Add the CSS tools you love via [`rollup.config.js`](rollup.config.js).
 
 🚢&nbsp;Ghost's [GH Deploy Action](.github/workflows/deploy-theme.yml) included by default. [Learn more how to deploy your theme automatically](https://github.com/TryGhost/action-deploy-theme)
 
-➕&nbsp;Extensible by design. Rollup's configuration structure makes it easy to add [any number of plugins easily](https://github.com/rollup/plugins). 
+➕&nbsp;Extensible by design. Rollup's configuration structure makes it easy to add [any number of plugins easily](https://github.com/rollup/plugins).
 
 &nbsp;
 
@@ -58,13 +58,13 @@ One neat trick is that you can also create custom one-off templates just by addi
 
 ## Development guide
 
-The Starter theme provides a first-class development experience out of the box. 
+The Starter theme provides a first-class development experience out of the box.
 
 &nbsp;
 
 ### Setup
 
-To see realtime changes during development, symlink the Starter theme folder to the `content/themes` folder in your local Ghost install. 
+To see realtime changes during development, symlink the Starter theme folder to the `content/themes` folder in your local Ghost install.
 
 ```bash
 ln -s /path/to/starter /ghost/content/themes/starter
