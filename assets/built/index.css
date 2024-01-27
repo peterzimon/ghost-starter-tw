@@ -1068,16 +1068,24 @@ video {
 }
 
 .my-1 {
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.8rem;
 }
 
 .mb-\[10vh\] {
   margin-bottom: 10vh;
 }
 
+.mb-\[4vmin\] {
+  margin-bottom: 4vmin;
+}
+
 .ml-10 {
-  margin-left: 2.5rem;
+  margin-left: 4rem;
 }
 
 .block {
@@ -1104,8 +1112,12 @@ video {
   display: none;
 }
 
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
 .h-8 {
-  height: 2rem;
+  height: 3.2rem;
 }
 
 .h-full {
@@ -1113,7 +1125,7 @@ video {
 }
 
 .max-h-10 {
-  max-height: 2.5rem;
+  max-height: 4rem;
 }
 
 .min-h-\[100vh\] {
@@ -1121,7 +1133,7 @@ video {
 }
 
 .w-8 {
-  width: 2rem;
+  width: 3.2rem;
 }
 
 .w-auto {
@@ -1134,6 +1146,10 @@ video {
 
 .max-w-\[1200px\] {
   max-width: 1200px;
+}
+
+.max-w-\[720px\] {
+  max-width: 720px;
 }
 
 .flex-grow {
@@ -1191,11 +1207,11 @@ video {
 }
 
 .gap-10 {
-  gap: 2.5rem;
+  gap: 4rem;
 }
 
 .gap-4 {
-  gap: 1rem;
+  gap: 1.6rem;
 }
 
 .gap-x-\[4vmin\] {
@@ -1228,6 +1244,11 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .px-\[3vmin\] {
   padding-left: 3vmin;
   padding-right: 3vmin;
@@ -1249,7 +1270,7 @@ video {
 }
 
 .pt-5 {
-  padding-top: 1.25rem;
+  padding-top: 2rem;
 }
 
 .pt-\[8vmin\] {
@@ -1265,18 +1286,27 @@ video {
 }
 
 .text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 2.4rem;
 }
 
 .text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+  font-size: 3rem;
+}
+
+.text-inherit {
+  font-size: inherit;
+}
+
+.text-md {
+  font-size: 1.45rem;
 }
 
 .text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 1.35rem;
+}
+
+.text-xs {
+  font-size: 1.2rem;
 }
 
 .font-bold {
@@ -1287,8 +1317,24 @@ video {
   font-weight: 300;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
+.leading-paragraph {
+  line-height: 1.45em;
+}
+
 .leading-tight {
-  line-height: 1.25;
+  line-height: 1.35em;
+}
+
+.leading-tighter {
+  line-height: 1.25em;
+}
+
+.tracking-wide {
+  letter-spacing: 0.025em;
 }
 
 .text-inherit {
@@ -1303,10 +1349,86 @@ video {
   opacity: 0.75;
 }
 
+.opacity-80 {
+  opacity: 0.8;
+}
+
 .transition-all {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+/* @import "components/global.css"; */
+
+/* Globals
+/* ---------------------------------------------------------- */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0px;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding: 0px;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.45rem;
+  line-height: 1.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0px;
+  font-weight: 700;
+  line-height: 1.35em;
+}
+
+h1 {
+  font-size: 4.2rem;
+  line-height: 1.15;
+  line-height: 1.1em;
+  letter-spacing: -0.025em;
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 3.6rem;
+  }
+}
+
+h2 {
+  font-size: 3.6rem;
+  line-height: 1.1em;
+  letter-spacing: -0.025em;
+}
+
+@media (max-width: 640px) {
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+h3 {
+  font-size: 3rem;
+  line-height: 1.25em;
+  letter-spacing: -0.025em;
+}
+
+@media (max-width: 640px) {
+  h3 {
+    font-size: 2.4rem;
+  }
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.75rem;
 }
 
 /*
@@ -1333,7 +1455,7 @@ via the  @apply function
 
 .gh-head-menu .nav a {
   display: inline-block;
-  padding-top: 0.25rem;
+  padding-top: 0.4rem;
   text-decoration-line: none;
 }
 
@@ -1346,13 +1468,13 @@ via the  @apply function
 
 @media (max-width: 640px) {
   #gh-head .gh-head-menu .nav li {
-    margin-top: 0.25rem;
-    margin-bottom: 0.25rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
   }
 
   #gh-head .gh-head-menu .nav a {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
   }
 
   #gh-head .gh-head-menu .nav {
@@ -1373,10 +1495,11 @@ via the  @apply function
 .gh-head-actions-list a:not([class]) {
   margin-left: 1.5vmin;
   display: inline-block;
-  padding-top: 0.25rem;
+  padding-top: 0.4rem;
 }
 
 .gh-foot a {
+  font-size: inherit;
   color: inherit;
 }
 
@@ -1395,7 +1518,7 @@ via the  @apply function
 
 .gh-foot-menu .nav a {
   display: inline-block;
-  padding-top: 0.25rem;
+  padding-top: 0.4rem;
   text-decoration-line: none;
   --tw-shadow: 0 -1px 0 0 currentcolor inset;
   --tw-shadow-colored: inset 0 -1px 0 0 var(--tw-shadow-color);
@@ -1404,8 +1527,7 @@ via the  @apply function
 
 @media (max-width: 700px) {
   .gh-foot-menu .nav {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+    font-size: 1.35rem;
   }
 }
 
@@ -1414,6 +1536,27 @@ via the  @apply function
 
 .gh-postfeed > *:first-child {
   grid-column: 1/-1;
+}
+
+/* Index
+/* ---------------------------------------------------------- */
+
+.gh-card-content p {
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
+  padding-left: 3vmin;
+  padding-right: 3vmin;
+}
+
+.gh-card-content > strong {
+  display: inline-block;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  font-weight: 600;
+  opacity: 0.75;
+  --tw-shadow: 0 -1px 0 0 inset currentColor;
+  --tw-shadow-colored: inset 0 -1px 0 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 /*
@@ -1476,60 +1619,6 @@ production stylesheet in assets/built/screen.css using: npm run dev
 
 .gh-head-actions a:last-child svg {
     height: 2rem;
-} */
-
-/* Index
-/* ---------------------------------------------------------- */
-
-/* .gh-card:not(:first-child) {
-    margin: 8vmin auto 0;
-} */
-
-/* .gh-card-link {
-    display: flex;
-    flex-direction: column;
-}
-
-.gh-card-image {
-    width: 100%;
-    object-fit: cover;
-    margin-bottom: 4vmin;
-    aspect-ratio: 1 / 1;
-}
-
-.gh-card-image:first-of-type {
-    aspect-ratio: 16 / 9;
-}
-
-
-.gh-card-meta {
-    display: block;
-    margin: 0 0 1rem;
-    font-size: 1.4rem;
-    line-height: 1.2em;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    opacity: 0.8;
-}
-
-.gh-card-content {
-    max-width: 720px;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 1.6rem;
-}
-
-.gh-card-content p {
-    margin: 1.2rem 0;
-    padding: 0 3vmin;
-}
-
-.gh-card-content > strong {
-    display: inline-block;
-    padding: 1px 0;
-    font-weight: 500;
-    box-shadow: 0 -1px 0 0 inset currentColor;
-    opacity: 0.75;
 } */
 
 /* Page
@@ -1758,6 +1847,10 @@ production stylesheet in assets/built/screen.css using: npm run dev
   content: var(--tw-content);
 }
 
+.first-of-type\:aspect-video:first-of-type {
+  aspect-ratio: 16 / 9;
+}
+
 .group.is-menu-open .group-\[\.is-menu-open\]\:fixed {
   position: fixed;
 }
@@ -1912,13 +2005,11 @@ production stylesheet in assets/built/screen.css using: npm run dev
   }
 
   .sm\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 1.45rem;
   }
 
   .sm\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+    font-size: 2rem;
   }
 
   .sm\:leading-normal {

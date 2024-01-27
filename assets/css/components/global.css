@@ -147,7 +147,8 @@ h6 {
 }
 
 h1 {
-    font-size: 4.6rem;
+    @apply text-3xl;
+    /* font-size: 4.6rem; */
     letter-spacing: -0.5px;
 }
 @media (max-width: 500px) {
@@ -157,7 +158,8 @@ h1 {
 }
 
 h2 {
-    font-size: 3.6rem;
+    @apply text-3xl;
+    /* font-size: 3.6rem; */
 }
 @media (max-width: 500px) {
     h2 {
