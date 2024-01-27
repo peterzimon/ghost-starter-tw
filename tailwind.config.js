@@ -4,6 +4,13 @@ export default {
   theme: {
       extend: {
         gridTemplateColumns: {
+          'canvas': `
+            [full-start] var(--full)
+            [wide-start] var(--wide)
+            [main-start] var(--main) [main-end]
+            var(--wide) [wide-end]
+            var(--full) [full-end]
+          `,
           'feed': 'repeat(auto-fit, minmax(min(350px, 100%), 1fr))'
         },
         spacing: {

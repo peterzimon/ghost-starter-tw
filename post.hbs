@@ -2,18 +2,18 @@
 
 {{#post}}
 
-<article class="gh-article {{post_class}}">
+<article class="gh-article {{post_class}} py-[8vmin]">
 
-    <header class="gh-header gh-canvas">
-        <span class="gh-post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
-        <h1 class="gh-title">{{title}}</h1>
+    <header class="gh-header gh-canvas grid grid-cols-canvas pb-[8vmin] text-center">
+        <span class="gh-post-meta mb-3 text-xs leading-tight tracking-wide uppercase opacity-80"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
+        <h1 class="gh-title text-6xl">{{title}}</h1>
 
         {{#if custom_excerpt}}
-        <p class="gh-excerpt">{{custom_excerpt}}</p>
+        <p class="gh-excerpt !text-xl mt-[3vmin]">{{custom_excerpt}}</p>
         {{/if}}
 
         {{#if feature_image}}
-        <figure class="gh-feature-image">
+        <figure class="gh-feature-image !col-[wide-start/wide-end] w-full mt-[8vmin]">
             <picture>
                 <source
                     srcset="
@@ -38,6 +38,7 @@
                     type="image/webp"
                 >
                 <img
+                    class="w-full"
                     srcset="
                     {{img_url feature_image size="xxs"}} 30w,
                     {{img_url feature_image size="xs"}} 100w,
@@ -57,11 +58,11 @@
         {{/if}}
     </header>
 
-    <div class="gh-content gh-canvas prose">
+    <div class="gh-content gh-canvas grid grid-cols-canvas">
         {{content}}
     </div>
 
-    <footer class="gh-footer gh-canvas">
+    <footer class="gh-footer gh-canvas grid grid-cols-canvas">
 
         <div class="gh-post-authors">
             Written by {{#foreach authors}}<a href="{{url}}">{{name}}</a>{{/foreach}}

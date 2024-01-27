@@ -131,10 +131,6 @@ via the  @apply function
     @apply col-[1/-1];
 }
 
-
-/* Index
-/* ---------------------------------------------------------- */
-
 .gh-card-content p {
     @apply my-4 px-[3vmin];
 }
@@ -142,6 +138,204 @@ via the  @apply function
 .gh-card-content > strong {
     @apply inline-block py-px font-semibold shadow-[0_-1px_0_0_inset_currentColor] opacity-75;
 }
+
+
+/* Index
+/* ---------------------------------------------------------- */
+
+.gh-canvas,
+.kg-width-full.kg-content-wide {
+    --gap: 4vw;
+    --main: min(var(--content-width, 720px), 100% - var(--gap) * 2);
+    --wide: minmax(0, calc((var(--container-width, 1200px) - var(--content-width, 720px)) / 2));
+    --full: minmax(var(--gap), 1fr);
+}
+
+.kg-width-full.kg-content-wide {
+    @apply grid grid-cols-canvas;
+}
+
+
+/* Content
+/* ---------------------------------------------------------- */
+
+/* Default fallback */
+.gh-canvas > * {
+    @apply col-[main-start/main-end];
+}
+
+.kg-width-wide,
+.kg-content-wide > div {
+    @apply col-[wide-start/wide-end];
+}
+
+.kg-width-full {
+    @apply col-[full-start/full-end];
+}
+
+.kg-width-full img {
+    @apply w-full;
+}
+
+
+/* Content & Typography
+/* ---------------------------------------------------------- */
+
+.gh-content > * + * {
+    @apply mt-[4vmin];
+}
+.gh-content [id]:not(:first-child) {
+    @apply mt-[1.5em];
+}
+
+.gh-content > [id] + * {
+    @apply mt-4;
+}
+
+.gh-content [id] + .kg-card,
+.gh-content blockquote + .kg-card {
+    @apply mt-[6vmin];
+}
+
+.gh-canvas > blockquote,
+.gh-canvas > ol,
+.gh-canvas > ul,
+.gh-canvas > dl,
+.gh-canvas > p {
+    @apply font-serif text-[1.25em] leading-paragraph;
+}
+
+.gh-content > ul,
+.gh-content > ol,
+.gh-content > dl {
+    @apply pl-[1.9em];
+}
+
+.gh-content hr {
+    @apply mt-[6vmin];
+}
+
+.gh-content hr + * {
+    @apply !mt-[6vmin];
+}
+
+.gh-content blockquote {
+    @apply relative italic;
+}
+
+.gh-content blockquote::before {
+    @apply content-[''] absolute -left-[1.5em] top-0 bottom-0 w-1 bg-[var(--color-primary)];
+}
+
+@media (max-width: 650px) {
+    .gh-canvas blockquote,
+    .gh-canvas ol,
+    .gh-canvas ul,
+    .gh-canvas dl,
+    .gh-canvas p {
+        @apply text-lg;
+    }
+
+    .gh-content blockquote::before {
+        @apply -left-[4vmin];
+    }
+}
+
+
+/* Cards
+/* ---------------------------------------------------------- */
+
+.gh-content :not(.kg-card):not([id]) + .kg-card,
+.gh-content .kg-card + :not(.kg-card) {
+    @apply mt-[6vmin];
+}
+
+figcaption {
+    @apply pt-4 px-4 pb-0 text-center text-[rgba(0,0,0,0.5)] text-sm leading-normal;
+}
+
+figcaption strong {
+    @apply text-[rgba(0,0,0,0.8)];
+}
+
+.gh-canvas :not(pre) code {
+    @apply align-middle py-[0.15em] px-[0.4em] border border-[#e1eaef] !font-normal text-[0.9em] leading-none text-[#dc0050] bg-[#f0f6f9] rounded-sm;
+}
+
+.gh-canvas > pre {
+    @apply overflow-scroll py-4 px-5 bg-[rgba(255,255,255,0.8)] rounded-sm shadow-sm;
+}
+
+.kg-embed-card {
+    @apply flex flex-col items-center w-full;
+}
+
+.kg-image-card img {
+    @apply m-auto;
+}
+
+/* Default to 16 / 9 aspect ratio for YouTube & Vimeo embeds – TW styles can't be directly applied */
+.kg-embed-card > :where(iframe[src*="youtube.com"],iframe[src*="vimeo.com"]) {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
+
+/* Card captions
+/* ---------------------------------------------------------- */
+
+.kg-width-full.kg-card-hascaption {
+    @apply grid grid-cols-[inherit];
+}
+
+.kg-width-wide.kg-card-hascaption img {
+    @apply col-[wide-start/wide-end];
+}
+.kg-width-full.kg-card-hascaption img {
+    @apply col-[1/-1];
+}
+
+.kg-width-full.kg-card-hascaption figcaption {
+    @apply col-[main-start/main-end];
+}
+
+
+/* Tables
+/* ---------------------------------------------------------- */
+
+.gh-content table {
+    @apply border-collapse w-full;
+}
+
+.gh-content th {
+    @apply py-[0.5em] px-[0.8em] text-left text-[0.75em] uppercase;
+}
+
+.gh-content td {
+    @apply py-[0.4em] px-[0.7em] text-left text-[0.75em] uppercase;
+}
+
+.gh-content tbody tr:nth-child(2n + 1) {
+    @apply bg-[rgba(0,0,0,0.1)] p-px;
+}
+
+.gh-content tbody tr:nth-child(2n + 2) td:last-child {
+    @apply shadow-[inset_1px_0_rgba(0,0,0,0.1),inset_-1px_0_rgba(0,0,0,0.1)];
+}
+
+.gh-content tbody tr:nth-child(2n + 2) td {
+    @apply shadow-[inset_1px_0_rgba(0,0,0,0.1)];
+}
+
+.gh-content tbody tr:last-child {
+    @apply border-b border-[rgba(0,0,0,0.1)];
+}
+
+
+
+
+
 
 
 /*
@@ -176,15 +370,6 @@ production stylesheet in assets/built/screen.css using: npm run dev
 /* ---------------------------------------------------------- */
 
 /*
-.gh-article {
-    padding: 8vmin 0;
-}
-
-.gh-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
 .gh-head-actions a:not(.gh-button) {
     display: inline-flex;
@@ -241,35 +426,7 @@ production stylesheet in assets/built/screen.css using: npm run dev
 /* Post
 /* ---------------------------------------------------------- */
 
-/* .gh-header {
-    padding: 0 0 8vmin 0;
-    text-align: center;
-}
-
-.gh-post-meta {
-    display: block;
-    margin: 0 0 1rem;
-    font-size: 1.4rem;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    opacity: 0.8;
-}
-
-.gh-excerpt {
-    margin: 1rem 0 0 0;
-}
-
-.gh-feature-image {
-    grid-column: wide-start / wide-end;
-    width: 100%;
-    margin: 8vmin 0 0;
-}
-
-.gh-feature-image img {
-    margin-inline: auto;
-    width: 100%;
-}
-
+/*
 .gh-post-footer {
     margin: 2rem 0;
 } */
