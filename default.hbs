@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{@site.locale}}">
+<html lang="{{@site.locale}}" class="flex flex-col min-h-[100vh] bg-white">
 <head>
 
     <meta charset="utf-8" />
@@ -13,57 +13,24 @@
     {{!-- Outputs important meta data and settings, should always be in <head> --}}
 
 </head>
-<body class="{{body_class}}">
-<div class="gh-viewport">
+<body class="{{body_class}} group">
+<div class="flex flex-col min-h-[100vh] bg-white">
 
-<header id="gh-head" class="gh-head">
-    <nav class="gh-head-inner gh-container">
+{{> "head"}}
 
-        <div class="gh-head-brand">
-            <a class="gh-head-logo" href="{{@site.url}}">
-                {{#if @site.logo}}
-                    <img src="{{@site.logo}}" alt="{{@site.title}}" />
-                {{else}}
-                    {{@site.title}}
-                {{/if}}
-            </a>
-            <a class="gh-burger" role="button" aria-label="menu">
-                <div class="gh-burger-box">
-                    <div class="gh-burger-inner"></div>
-                </div>
-            </a>
-        </div>
-        <div class="gh-head-menu">
-            {{navigation}}
-        </div>
-        <div class="gh-head-actions">
-            <div class="gh-head-actions-list">
-                {{search}}
-                {{#if @site.members_enabled}}
-                    {{^if @member}}
-                    <a class="gh-button" href="{{@site.signup_url}}">Subscribe</a>
-                    {{else}}
-                    <a class="gh-button" href="#/portal/account">Account</a>
-                    {{/if}}
-                {{/if}}
-            </div>
-        </div>
-    </nav>
-</header>
-
-<main class="gh-main">
+<main class="gh-main flex flex-grow flex-col">
 
     {{{body}}}
     {{!-- All content gets inserted here, index.hbs, post.hbs, etc --}}
 
 </main>
 
-<footer class="gh-foot">
-    <div class="gh-container">
-        <div class="gh-foot-menu">
+<footer class="gh-foot flex items-center justify-center pt-[8vmin] px-[4vmin]">
+    <div class="gh-container w-auto">
+        <div class="gh-foot-menu flex items-center justify-center">
             {{navigation type="secondary"}}
         </div>
-        <div class="gh-foot-meta">
+        <div class="gh-foot-meta my-1 text-center opacity-75 text-sm">
             Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
         </div>
     </div>
