@@ -4,11 +4,11 @@
     <div class="gh-container w-full max-w-[1200px] mx-auto">
 
         {{#tag}}
-        <header class="gh-page-head">
+        <header class="gh-page-head mx-auto pt-[8vmin] pb-[4vmin]">
 
             <h1>{{name}}</h1>
 
-            <p>
+            <p class="max-w-[720px] mt-[0.3em] mx-auto px-[6vmin] text-sm opacity-50 text-center">{{bio}}</p>
                 {{#if description}}
                     {{description}}
                 {{else}}
@@ -17,7 +17,7 @@
             </p>
 
             {{#if feature_image}}
-                <img class="gh-page-image" src="{{feature_image}}" alt="{{name}}" />
+                <img class="gh-page-image mt-[4vmin]" src="{{feature_image}}" alt="{{name}}" />
             {{/if}}
 
         </header>

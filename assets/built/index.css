@@ -564,6 +564,11 @@ video {
   margin: 4vmin;
 }
 
+.mx-\[0\.75vmin\] {
+  margin-left: 0.75vmin;
+  margin-right: 0.75vmin;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -578,6 +583,10 @@ video {
   margin-bottom: 1.2rem;
 }
 
+.mb-\[1\.5em\] {
+  margin-bottom: 1.5em;
+}
+
 .mb-\[10vh\] {
   margin-bottom: 10vh;
 }
@@ -588,6 +597,18 @@ video {
 
 .ml-10 {
   margin-left: 4rem;
+}
+
+.mt-0 {
+  margin-top: 0px;
+}
+
+.mt-\[0\.3em\] {
+  margin-top: 0.3em;
+}
+
+.mt-\[2vmin\] {
+  margin-top: 2vmin;
 }
 
 .mt-\[3vmin\] {
@@ -634,6 +655,10 @@ video {
   height: 3.2rem;
 }
 
+.h-\[12vmin\] {
+  height: 12vmin;
+}
+
 .h-full {
   height: 100%;
 }
@@ -648,6 +673,10 @@ video {
 
 .w-8 {
   width: 3.2rem;
+}
+
+.w-\[12vmin\] {
+  width: 12vmin;
 }
 
 .w-full {
@@ -773,6 +802,10 @@ video {
   word-break: break-all;
 }
 
+.rounded-full {
+  border-radius: 9999px;
+}
+
 .bg-inherit {
   background-color: inherit;
 }
@@ -797,6 +830,11 @@ video {
   padding-right: 4vmin;
 }
 
+.px-\[6vmin\] {
+  padding-left: 6vmin;
+  padding-right: 6vmin;
+}
+
 .py-\[4vmin\] {
   padding-top: 4vmin;
   padding-bottom: 4vmin;
@@ -805,6 +843,10 @@ video {
 .py-\[8vmin\] {
   padding-top: 8vmin;
   padding-bottom: 8vmin;
+}
+
+.pb-\[4vmin\] {
+  padding-bottom: 4vmin;
 }
 
 .pb-\[8vmin\] {
@@ -910,6 +952,10 @@ video {
 
 .no-underline {
   text-decoration-line: none;
+}
+
+.opacity-50 {
+  opacity: 0.5;
 }
 
 .opacity-75 {
@@ -1018,6 +1064,7 @@ via the  @apply function
   list-style-type: none;
   flex-wrap: wrap;
   align-items: center;
+  gap: 1.6rem;
 }
 
 .gh-head-menu .nav li {
@@ -1452,31 +1499,6 @@ production stylesheet in assets/built/screen.css using: npm run dev
 /* Page
 /* ---------------------------------------------------------- */
 
-/* .gh-page-head {
-    margin: 0 auto;
-    padding: 8vmin 0 4vmin;
-    text-align: center;
-}
-
-.gh-page-image {
-    margin: 4vmin 0 0 0;
-}
-
-.gh-page-head > p {
-    max-width: 720px;
-    margin: 0.3em auto 0;
-    padding: 0 6vmin;
-    font-size: 1.3em;
-    line-height: 1.4em;
-    opacity: 0.5;
-}
-
-@media (max-width: 700px) {
-    .gh-page-head > p {
-        font-size: 1.6rem;
-    }
-} */
-
 /* Post
 /* ---------------------------------------------------------- */
 
@@ -1487,49 +1509,6 @@ production stylesheet in assets/built/screen.css using: npm run dev
 
 /* Author Archive
 /* ---------------------------------------------------------- */
-
-/* .gh-author-image {
-    height: 12vmin;
-    width: 12vmin;
-    margin: 0 auto 1.5em;
-    border-radius: 100%;
-    overflow: hidden;
-    object-fit: cover;
-}
-
-.gh-author-meta {
-    margin: 2vmin 0 0 0;
-    font-size: 1.2em;
-}
-
-.gh-author-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.gh-author-links a {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    margin: 0 0.75vmin;
-}
-
-.gh-author-links a + a:before {
-    display: block;
-    content: "";
-    margin: 0 1.25vmin 0 0;
-    height: 1em;
-    width: 1px;
-    background: rgba(0,0,0,0.3);
-    transform: rotate(20deg);
-}
-
-@media (max-width: 700px) {
-    .gh-author-meta {
-        font-size: 1.6rem;
-    }
-} */
 
 .before\:absolute::before {
   content: var(--tw-content);

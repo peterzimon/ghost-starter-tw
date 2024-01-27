@@ -69,7 +69,7 @@ via the  @apply function
 /* Primary Navigation
 /* ---------------------------------------------------------- */
 .gh-head-menu .nav {
-    @apply inline-flex flex-wrap items-center list-none;
+    @apply inline-flex flex-wrap items-center list-none gap-4;
 }
 
 .gh-head-menu .nav li {
@@ -406,30 +406,6 @@ production stylesheet in assets/built/screen.css using: npm run dev
 /* Page
 /* ---------------------------------------------------------- */
 
-/* .gh-page-head {
-    margin: 0 auto;
-    padding: 8vmin 0 4vmin;
-    text-align: center;
-}
-
-.gh-page-image {
-    margin: 4vmin 0 0 0;
-}
-
-.gh-page-head > p {
-    max-width: 720px;
-    margin: 0.3em auto 0;
-    padding: 0 6vmin;
-    font-size: 1.3em;
-    line-height: 1.4em;
-    opacity: 0.5;
-}
-
-@media (max-width: 700px) {
-    .gh-page-head > p {
-        font-size: 1.6rem;
-    }
-} */
 
 
 /* Post
@@ -443,46 +419,3 @@ production stylesheet in assets/built/screen.css using: npm run dev
 
 /* Author Archive
 /* ---------------------------------------------------------- */
-
-/* .gh-author-image {
-    height: 12vmin;
-    width: 12vmin;
-    margin: 0 auto 1.5em;
-    border-radius: 100%;
-    overflow: hidden;
-    object-fit: cover;
-}
-
-.gh-author-meta {
-    margin: 2vmin 0 0 0;
-    font-size: 1.2em;
-}
-
-.gh-author-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.gh-author-links a {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    margin: 0 0.75vmin;
-}
-
-.gh-author-links a + a:before {
-    display: block;
-    content: "";
-    margin: 0 1.25vmin 0 0;
-    height: 1em;
-    width: 1px;
-    background: rgba(0,0,0,0.3);
-    transform: rotate(20deg);
-}
-
-@media (max-width: 700px) {
-    .gh-author-meta {
-        font-size: 1.6rem;
-    }
-} */
