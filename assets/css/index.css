@@ -72,7 +72,12 @@ via the  @apply function
     }
 }
 
+/* Post list
+/* ---------------------------------------------------------- */
 
+.gh-postfeed > *:first-child {
+    @apply col-[1/-1];
+}
 
 
 
@@ -100,7 +105,6 @@ production stylesheet in assets/built/screen.css using: npm run dev
 @import "ghost/errors.css";
 @import "ghost/footer.css";
 @import "ghost/badge.css";
-@import "ghost/pagination.css";
 @import "ghost/comments.css"; */
 
 
@@ -109,23 +113,8 @@ production stylesheet in assets/built/screen.css using: npm run dev
 /* ---------------------------------------------------------- */
 
 /*
-.gh-page {
-    padding: 0 4vmin;
-}
-
 .gh-article {
     padding: 8vmin 0;
-}
-
-.gh-postfeed {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
-    gap: 4.8vmin 4vmin;
-    padding: 8vmin 0;
-}
-
-.gh-postfeed > *:first-child {
-    grid-column: 1 / -1;
 }
 
 .gh-container {

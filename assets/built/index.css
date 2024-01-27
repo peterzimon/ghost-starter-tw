@@ -1058,6 +1058,15 @@ video {
   grid-column: auto;
 }
 
+.m-\[4vmin\] {
+  margin: 4vmin;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .my-1 {
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
@@ -1123,6 +1132,10 @@ video {
   width: 100%;
 }
 
+.max-w-\[1200px\] {
+  max-width: 1200px;
+}
+
 .flex-grow {
   flex-grow: 1;
 }
@@ -1153,6 +1166,10 @@ video {
   grid-template-columns: 1fr;
 }
 
+.grid-cols-feed {
+  grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -1179,6 +1196,15 @@ video {
 
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-x-\[4vmin\] {
+  -moz-column-gap: 4vmin;
+       column-gap: 4vmin;
+}
+
+.gap-y-\[4\.8vmin\] {
+  row-gap: 4.8vmin;
 }
 
 .self-center {
@@ -1215,6 +1241,11 @@ video {
 .py-\[4vmin\] {
   padding-top: 4vmin;
   padding-bottom: 4vmin;
+}
+
+.py-\[8vmin\] {
+  padding-top: 8vmin;
+  padding-bottom: 8vmin;
 }
 
 .pt-5 {
@@ -1378,6 +1409,13 @@ via the  @apply function
   }
 }
 
+/* Post list
+/* ---------------------------------------------------------- */
+
+.gh-postfeed > *:first-child {
+  grid-column: 1/-1;
+}
+
 /*
 
 This is a development CSS file that is compiled to a minified
@@ -1404,30 +1442,14 @@ production stylesheet in assets/built/screen.css using: npm run dev
 @import "ghost/errors.css";
 @import "ghost/footer.css";
 @import "ghost/badge.css";
-@import "ghost/pagination.css";
 @import "ghost/comments.css"; */
 
 /* Main - Your styles here! Edit below
 /* ---------------------------------------------------------- */
 
 /*
-.gh-page {
-    padding: 0 4vmin;
-}
-
 .gh-article {
     padding: 8vmin 0;
-}
-
-.gh-postfeed {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
-    gap: 4.8vmin 4vmin;
-    padding: 8vmin 0;
-}
-
-.gh-postfeed > *:first-child {
-    grid-column: 1 / -1;
 }
 
 .gh-container {

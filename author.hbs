@@ -1,7 +1,7 @@
 {{!< default}}
 
-<div class="gh-page">
-    <div class="gh-container">
+<div class="gh-page px-[4vmin]">
+    <div class="gh-container w-full max-w-[1200px] mx-auto">
 
         {{#author}}
         <header class="gh-page-head">
@@ -34,7 +34,7 @@
         </header>
         {{/author}}
 
-        <div class="gh-postfeed">
+        <div class="gh-postfeed grid grid-cols-feed gap-y-[4.8vmin] gap-x-[4vmin] py-[8vmin]">
         {{#foreach posts}}
 
             {{> "card"}} {{!-- partials/card.hbs --}}

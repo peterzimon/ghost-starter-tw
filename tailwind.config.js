@@ -2,7 +2,11 @@
 export default {
   content: ["./*.hbs", "./**/*.hbs"],
   theme: {
-      extend: {}
+      extend: {
+        gridTemplateColumns: {
+          'feed': 'repeat(auto-fit, minmax(min(350px, 100%), 1fr))'
+        }
+      }
   },
   plugins: [
       require('@tailwindcss/typography')

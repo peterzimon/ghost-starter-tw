@@ -1,8 +1,8 @@
-<header id="gh-head" class="px-[3vmin] py-[4vmin] bg-inherit transition-all overflow-hidden group-[.is-menu-open]:fixed group-[.is-menu-open]:inset-0 group-[.is-menu-open]:z-[900] group-[.is-menu-open]:overflow-y-scroll sm:overflow-auto">
-    <nav class="grid grid-cols-[1fr] gap-10 grid-flow-row-dense gh-container h-full sm:h-auto sm:grid-cols-[1fr_auto_1fr] group-[.is-menu-open]:grid-rows-[auto_1fr_auto]">
+<header id="gh-head" class="gh-head px-[3vmin] py-[4vmin] bg-inherit transition-all overflow-hidden group-[.is-menu-open]:fixed group-[.is-menu-open]:inset-0 group-[.is-menu-open]:z-[900] group-[.is-menu-open]:overflow-y-scroll sm:overflow-auto">
+    <nav class="gh-head-inner grid grid-cols-[1fr] gap-10 grid-flow-row-dense gh-container w-full max-w-[1200px] mx-auto h-full sm:h-auto sm:grid-cols-[1fr_auto_1fr] group-[.is-menu-open]:grid-rows-[auto_1fr_auto]">
 
         <div class="gh-head-brand relative z-10 col-auto flex sm:grid justify-between select-none sm:select-auto items-center sm:max-w-[200px] text-center break-all sm:col-[2/3]">
-            <a class="text-inherit no-underline block font-bold leading-tight text-2xl sm:text-xl" href="{{@site.url}}">
+            <a class="gh-head-logo text-inherit no-underline block font-bold leading-tight text-2xl sm:text-xl" href="{{@site.url}}">
                 {{#if @site.logo}}
                     <img class="max-h-10" src="{{@site.logo}}" alt="{{@site.title}}" />
                 {{else}}
@@ -10,8 +10,8 @@
                 {{/if}}
             </a>
             <a class="gh-burger inline-block relative sm:hidden cursor-pointer" role="button" aria-label="menu">
-                <div class="relative flex items-center justify-center w-8 h-8 before:m-auto before:absolute before:block before:inset-0 before:content-[''] before:w-full before:h-px before:bg-current before:transition-all before:will-change-[transform,width] group-[.is-menu-open]:before:w-0 group-[.is-menu-open]:before:translage-x-[19px] group-[.is-menu-open]:before:transition-all">
-                    <div class="w-full h-full before:m-auto before:absolute before:block before:inset-0 before:content-[''] before:w-full before:h-px before:bg-current before:transition-all before:will-change-[transform,width] before:-translate-y-[6px] group-[.is-menu-open]:before:w-[26px] group-[.is-menu-open]:before:translate-x-[6px] group-[.is-menu-open]:before:translate-y-0 group-[.is-menu-open]:before:rotate-[135deg] after:m-auto after:absolute after:block after:inset-0 after:content-[''] after:w-full after:h-px after:bg-current after:transition-all after:will-change-[transform,width] after:translate-y-[6px] group-[.is-menu-open]:after:w-[26px] group-[.is-menu-open]:after:translate-x-[6px] group-[.is-menu-open]:after:translate-y-0 group-[.is-menu-open]:after:rotate-[-135deg]"></div>
+                <div class="gh-burger-box relative flex items-center justify-center w-8 h-8 before:m-auto before:absolute before:block before:inset-0 before:content-[''] before:w-full before:h-px before:bg-current before:transition-all before:will-change-[transform,width] group-[.is-menu-open]:before:w-0 group-[.is-menu-open]:before:translage-x-[19px] group-[.is-menu-open]:before:transition-all">
+                    <div class="gh-burger-inner w-full h-full before:m-auto before:absolute before:block before:inset-0 before:content-[''] before:w-full before:h-px before:bg-current before:transition-all before:will-change-[transform,width] before:-translate-y-[6px] group-[.is-menu-open]:before:w-[26px] group-[.is-menu-open]:before:translate-x-[6px] group-[.is-menu-open]:before:translate-y-0 group-[.is-menu-open]:before:rotate-[135deg] after:m-auto after:absolute after:block after:inset-0 after:content-[''] after:w-full after:h-px after:bg-current after:transition-all after:will-change-[transform,width] after:translate-y-[6px] group-[.is-menu-open]:after:w-[26px] group-[.is-menu-open]:after:translate-x-[6px] group-[.is-menu-open]:after:translate-y-0 group-[.is-menu-open]:after:rotate-[-135deg]"></div>
                 </div>
             </a>
         </div>
