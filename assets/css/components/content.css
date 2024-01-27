@@ -1,0 +1,186 @@
+/* Generic
+/* ---------------------------------------------------------- */
+
+/* Default fallback */
+.gh-canvas > * {
+    @apply col-[main-start/main-end];
+}
+
+.kg-width-wide,
+.kg-content-wide > div {
+    @apply col-[wide-start/wide-end];
+}
+
+.kg-width-full {
+    @apply col-[full-start/full-end];
+}
+
+.kg-width-full img {
+    @apply w-full;
+}
+
+
+/* Typography
+/* ---------------------------------------------------------- */
+
+.gh-content > * + * {
+    @apply mt-[4vmin];
+}
+.gh-content [id]:not(:first-child) {
+    @apply mt-[1.5em];
+}
+
+.gh-content > [id] + * {
+    @apply mt-4;
+}
+
+.gh-content [id] + .kg-card,
+.gh-content blockquote + .kg-card {
+    @apply mt-[6vmin];
+}
+
+.gh-canvas > blockquote,
+.gh-canvas > ol,
+.gh-canvas > ul,
+.gh-canvas > dl,
+.gh-canvas > p {
+    @apply font-serif text-[1.25em] leading-paragraph;
+}
+
+.gh-content > ul,
+.gh-content > ol,
+.gh-content > dl {
+    @apply pl-[1.9em];
+}
+
+.gh-content > ul {
+    @apply list-disc;
+}
+
+.gh-content hr {
+    @apply mt-[6vmin];
+}
+
+.gh-content hr + * {
+    @apply !mt-[6vmin];
+}
+
+.gh-content blockquote {
+    @apply relative italic;
+}
+
+.gh-content blockquote::before {
+    @apply content-[''] absolute -left-[1.5em] top-0 bottom-0 w-1 bg-[var(--color-primary)];
+}
+
+@media (max-width: 650px) {
+    .gh-canvas blockquote,
+    .gh-canvas ol,
+    .gh-canvas ul,
+    .gh-canvas dl,
+    .gh-canvas p {
+        @apply text-lg;
+    }
+
+    .gh-content blockquote::before {
+        @apply -left-[4vmin];
+    }
+}
+
+
+/* Cards
+/* ---------------------------------------------------------- */
+
+.gh-content :not(.kg-card):not([id]) + .kg-card,
+.gh-content .kg-card + :not(.kg-card) {
+    @apply mt-[6vmin];
+}
+
+figcaption {
+    @apply pt-4 px-4 pb-0 text-center text-[rgba(0,0,0,0.5)] text-sm leading-normal;
+}
+
+figcaption strong {
+    @apply text-[rgba(0,0,0,0.8)];
+}
+
+.gh-canvas :not(pre) code {
+    @apply align-middle py-[0.15em] px-[0.4em] border border-[#e1eaef] !font-normal text-[0.9em] leading-none text-[#dc0050] bg-[#f0f6f9] rounded-sm;
+}
+
+.gh-canvas > pre {
+    @apply overflow-scroll py-4 px-5 bg-[rgba(255,255,255,0.8)] rounded-md border;
+}
+
+.kg-embed-card {
+    @apply flex flex-col items-center w-full;
+}
+
+.kg-image-card img {
+    @apply m-auto;
+}
+
+/* Default to 16 / 9 aspect ratio for YouTube & Vimeo embeds – TW styles can't be directly applied */
+.kg-embed-card > :where(iframe[src*="youtube.com"],iframe[src*="vimeo.com"]) {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
+
+/* Card captions
+/* ---------------------------------------------------------- */
+
+.kg-width-full.kg-card-hascaption {
+    @apply grid grid-cols-[inherit];
+}
+
+.kg-width-wide.kg-card-hascaption img {
+    @apply col-[wide-start/wide-end];
+}
+.kg-width-full.kg-card-hascaption img {
+    @apply col-[1/-1];
+}
+
+.kg-width-full.kg-card-hascaption figcaption {
+    @apply col-[main-start/main-end];
+}
+
+
+/* Tables
+/* ---------------------------------------------------------- */
+
+.gh-content table {
+    @apply border-collapse w-full;
+}
+
+.gh-content th {
+    @apply py-[0.5em] px-[0.8em] text-left text-[0.75em] uppercase;
+}
+
+.gh-content td {
+    @apply py-[0.4em] px-[0.7em] text-left text-[0.75em] uppercase;
+}
+
+.gh-content tbody tr:nth-child(2n + 1) {
+    @apply bg-[rgba(0,0,0,0.1)] p-px;
+}
+
+.gh-content tbody tr:nth-child(2n + 2) td:last-child {
+    @apply shadow-[inset_1px_0_rgba(0,0,0,0.1),inset_-1px_0_rgba(0,0,0,0.1)];
+}
+
+.gh-content tbody tr:nth-child(2n + 2) td {
+    @apply shadow-[inset_1px_0_rgba(0,0,0,0.1)];
+}
+
+.gh-content tbody tr:last-child {
+    @apply border-b border-[rgba(0,0,0,0.1)];
+}
+
+
+/* Read more
+/* ---------------------------------------------------------- */
+.gh-readmore svg {
+    @apply inline-block align-middle h-[1em] mt-[0.15em];
+}

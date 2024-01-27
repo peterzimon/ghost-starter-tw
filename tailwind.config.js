@@ -3,6 +3,13 @@ export default {
   content: ["./*.hbs", "./**/*.hbs"],
   theme: {
       extend: {
+        screens: {
+          sm: '640px',
+          md: '800px',
+          lg: '1024px',
+          xl: '1320px',
+          tablet: '860px'
+        },
         gridTemplateColumns: {
           'canvas': `
             [full-start] var(--full)
@@ -64,7 +71,7 @@ export default {
           '3xl': '3rem',
           '4xl': '3.6rem',
           '5xl': ['4.2rem', '1.15'],
-          '6xl': ['6rem', '1'],
+          '6xl': ['5.4rem', '1'],
           '7xl': ['7.2rem', '1'],
           '8xl': ['9.6rem', '1'],
           '9xl': ['12.8rem', '1'],

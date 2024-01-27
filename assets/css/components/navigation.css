@@ -1,0 +1,62 @@
+/* Primary Navigation
+/* ---------------------------------------------------------- */
+.gh-head-menu .nav {
+    @apply inline-flex flex-wrap items-center list-none gap-4;
+}
+
+.gh-head-menu .nav li {
+    @apply mr-[1.5vmin] p-0;
+}
+
+.gh-head-menu .nav a {
+    @apply inline-block pt-1 no-underline;
+}
+
+.gh-head-menu .nav-current a {
+    @apply shadow-[0_-1px_0_0_currentcolor_inset] no-underline;
+}
+
+@media (max-width: 640px) {
+    #gh-head .gh-head-menu .nav li {
+        @apply my-1;
+    }
+    #gh-head .gh-head-menu .nav a {
+        @apply py-2;
+    }
+    #gh-head .gh-head-menu .nav {
+        @apply flex flex-col items-center;
+    }
+    .is-menu-open {
+        @apply overflow-hidden h-[100vh];
+    }
+}
+
+
+/* Secondary Navigation
+/* ---------------------------------------------------------- */
+
+.gh-head-actions-list a:not([class]) {
+    @apply inline-block ml-[1.5vmin] pt-1;
+}
+
+.gh-foot a {
+    @apply text-inherit;
+}
+
+.gh-foot-menu .nav {
+    @apply inline-flex flex-wrap items-center list-none justify-center;
+}
+
+.gh-foot-menu .nav li {
+    @apply mr-[1.5vmin] p-0;
+}
+
+.gh-foot-menu .nav a {
+    @apply inline-block pt-1 no-underline shadow-[0_-1px_0_0_currentcolor_inset];
+}
+
+@media (max-width: 700px) {
+    .gh-foot-menu .nav {
+        @apply text-sm;
+    }
+}

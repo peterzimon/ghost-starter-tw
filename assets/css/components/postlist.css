@@ -1,0 +1,37 @@
+/* Post list
+/* ---------------------------------------------------------- */
+
+.gh-postfeed > *:first-child {
+    @apply col-[1/-1];
+}
+
+.gh-postfeed > *:first-child h2 {
+    @apply text-6xl;
+}
+
+.gh-postfeed > *:first-child p {
+    @apply text-xl;
+}
+
+.gh-card-content p {
+    @apply my-4 px-[3vmin];
+}
+
+.gh-card-content > strong {
+    @apply inline-block py-px font-semibold shadow-[0_-1px_0_0_inset_currentColor] opacity-75;
+}
+
+/* Index
+/* ---------------------------------------------------------- */
+
+.gh-canvas,
+.kg-width-full.kg-content-wide {
+    --gap: 4vw;
+    --main: min(var(--content-width, 720px), 100% - var(--gap) * 2);
+    --wide: minmax(0, calc((var(--container-width, 1200px) - var(--content-width, 720px)) / 2));
+    --full: minmax(var(--gap), 1fr);
+}
+
+.kg-width-full.kg-content-wide {
+    @apply grid grid-cols-canvas;
+}

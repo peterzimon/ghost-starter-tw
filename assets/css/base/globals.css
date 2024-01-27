@@ -1,0 +1,51 @@
+:root {
+    /* Colours */
+    --color-primary: var(--ghost-accent-color, #3eb0ef);
+}
+
+html {
+    @apply text-[62.5%];
+}
+
+body {
+    @apply min-h-[100vh] m-0 p-0 font-sans leading-6 bg-white scroll-smooth text-base;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @apply m-0 leading-tight font-bold;
+}
+
+h1 {
+    @apply text-5xl tracking-tight leading-supertight;
+}
+@media (max-width: 640px) {
+    h1 {
+        @apply text-4xl;
+    }
+}
+
+h2 {
+    @apply text-4xl tracking-tight leading-supertight;
+}
+@media (max-width: 640px) {
+    h2 {
+        @apply text-3xl;
+    }
+}
+
+h3 {
+    @apply text-3xl tracking-tight leading-tighter;
+}
+@media (max-width: 640px) {
+    h3 {
+        @apply text-2xl;
+    }
+}
+
+h4 {
+    @apply text-xl;
+}
+
+h5 {
+    @apply text-lg;
+}
