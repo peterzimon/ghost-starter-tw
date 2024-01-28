@@ -1,12 +1,14 @@
 :root {
+    --content-width: 620px;
+    --container-width: 1320px;
     --color-primary: var(--ghost-accent-color, #3eb0ef);
 }
 
 .gh-canvas,
 .kg-width-full.kg-content-wide {
     --gap: 4vw;
-    --main: min(var(--content-width, 620px), 100% - var(--gap) * 2);
-    --wide: minmax(0, calc((var(--container-width, 1200px) - var(--content-width, 620px)) / 2));
+    --main: min(var(--content-width, 720px), 100% - var(--gap) * 2);
+    --wide: minmax(0, calc((var(--container-width, 1200px) - var(--content-width, 720px)) / 2));
     --full: minmax(var(--gap), 1fr);
 }
 
